@@ -1,59 +1,22 @@
-describe("destructuring", function() {
-	"use strict";
-  
-	it("can destructure arrays", function() {
+describe('destructuring', function() {
+	'use strict';
 
-		var doWork = function(){
-			return [1, 3, 2];
-		};
 
-		let [, x, y, z] = doWork();
-
-		expect(x).toBe(3);
-		expect(y).toBe(2);
-		expect(z).toBeUndefined();
-
-	});
-
-	it("can destructure objects", function() {
+	xit('can destructure objects', function() {
 
 	    let doWork = function() {
 		     return {
-			    firstName: "Scott",
-		        lastName: "Allen",
+			    firstName: 'Scott',
+		        lastName: 'Allen',
 		        handles: {
-		        	twitter: "OdeToCode"    
-		    	}
-		    };		   
+		        	social: ['twitter:OdeToCode','fb:OdeToCode']
+		    	  }
+		    };
 		};
+		//TODO:get firstName and fb value using destrucuring
 
-		let { 
-				firstName, 
-			  	handles:{twitter}
-			} = doWork();
-
-		expect(firstName).toBe("Scott");
-		expect(twitter).toBe("OdeToCode");
+		expect(firstName).toBe('Scott');
+		expect(fb).toBe('fb:OdeToCode');
 
 	});
-
-
-	it("works with parameters", function() {
-
-		let doWork = function(url, {data, cache, headers}){
-			return data;
-		};
-
-		
-		let result = doWork(
-				"api/test", {
-					data: "test", 
-					cache: false
-				}
-			);
-		
-		expect(result).toBe("test");
-
-	});
-
 });

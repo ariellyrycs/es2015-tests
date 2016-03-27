@@ -11,10 +11,8 @@
     "tests"
   ],
   "devDependencies": {
-
   },
   "dependencies": {
-    "traceur": "~0.0.45",
     "jasmine": "~2.0.0"
   }
 }

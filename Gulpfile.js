@@ -14,17 +14,16 @@ let customOpts = {
     './spec/es6/2-templates.js',
     './spec/es6/3-defaults.js',
     './spec/es6/4-destructuring.js',
-    './spec/es6/5-rest.js',
-    './spec/es6/6-spread.js',
-    './spec/es6/7-iterators.js',
-    './spec/es6/8-generators.js',
-    './spec/es6/9-asyncGeneratorSpec.js'
+    './spec/es6/5-iterators.js',
+    './spec/es6/6-generators.js'
   ],
-  debug: true,
-  "presets": [ "es2015", "stage-0" ]
+  debug: true
 };
-let opts = Object.assign({}, watchify.args, customOpts);
-let b = watchify(browserify(opts).transform(babel));
+let bebelOpts = {optional: ['runtime']};
+let opts = Object.assign({}, watchify.args, customOpts, bebelOpts);
+let b = watchify(browserify(opts).transform(babel.configure(bebelOpts)));
+
+
 
 
 gulp.task('default', bundle);

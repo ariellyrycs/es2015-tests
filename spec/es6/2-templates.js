@@ -1,31 +1,18 @@
-describe("template literals", function(){
+describe('template literals', function(){
 
-	it("can easily combine literals and data", function(){
+	xit('can help build URLs', function(){
 
-		let doWork = function(name){
-			return `Hello, ${name}`;
-		};
-
-		let result = doWork("Scott");
-		expect(result).toBe("Hello, Scott");
-
-	});
-
-
-	it("can help build URLs", function(){
-
-		let category = "music";
+		let category = 'music';
 		let id = 2112;
+		//TODO:Make such concatenation here.
 
-		let url = `http://apiserver/${category}/${id}`;
-
-		expect(url).toBe("http://apiserver/music/2112");
+		expect(url).toBe('http://apiserver/music/2112');
 	});
 
-	it("can use tags", function(){
+	xit('can use tags', function(){
 
 		let upper = function(strings, ...values){
-			let result = "";
+			let result = '';
 			for(var i = 0; i < strings.length; i++){
 				result += strings[i];
 				if(i < values.length){
@@ -35,11 +22,8 @@ describe("template literals", function(){
 			return result.toUpperCase();
 		};
 
-		var x = 1;
-		var y = 3;
-		var result = upper `${x} + ${y} is ${x+y}`;
 
-		expect(result).toBe("1 + 3 IS 4");
+		expect(result).toBe('1 + 3 IS 4');
 
 	});
 
