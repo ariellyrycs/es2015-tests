@@ -1,7 +1,5 @@
 # es2015-tests
 
-
-
 =================
 ###Installation:
 
@@ -30,3 +28,5 @@ or Wget:
 ###Usage:
 
 **Transpile es6:** ```gulp```
+
+**Open SpecRunner.html width the browser**
