@@ -13,6 +13,7 @@
   "devDependencies": {
   },
   "dependencies": {
-    "jasmine": "~2.0.0"
+    "jasmine": "~2.0.0",
+    "deck.js": "~1.1.0"
   }
 }
